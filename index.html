@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codebeast | Built to Code</title>
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding-top: 140px; 
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+
+    
+    .fade-out {
+        opacity: 0;
+    }
+
+    .fade-in {
+        opacity: 1;
+    }
+
+   
+    .top-bar {
+        background: #000;
+        padding: 8px 20px;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: 1px solid #222;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    
+    .navbar {
+        background: #000;
+        display: flex;
+        align-items: center;
+        padding: 10px 40px;
+        border-bottom: 1px solid #333;
+        position: fixed;
+        top: 40px; 
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .logo img {
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        margin-left: 40px;
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .search-box {
+        flex: 1;
+        text-align: center;
+    }
+
+    .search-box input {
+        width: 50%;
+        padding: 8px 14px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+    }
+
+    .icons {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        margin-left: 40px;
+    }
+
+    .icons a.icon-link {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    .icons a.icon-link:hover {
+        opacity: 0.7;
+    }
+
+    
+    .intro-text {
+        text-align: center;
+        padding: 30px 40px;
+        background: #000;
+        color: #ccc;
+        font-size: 16px;
+        line-height: 0.4;
+        border-bottom: 1px solid #222;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .yellow {
+        color: #FFE52A;
+    }
+
+   
+    .hero-video {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .hero-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    
+    #workout {
+        height: 100vh; 
+        padding: 120px 40px 40px;
+        background: black;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #workout h1 {
+        margin: 5px 0 10px;
+        color: #FFE52A;
+    }
+
+    #workout p {
+        max-width: 900px;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    
+    .plans {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: nowrap;
+    }
+
+    .plans img {
+        width: 180px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+    }
+
+    .plans img:hover {
+        transform: scale(1.05);
+    }
+
+    #meal {
+        height: 100vh; 
+        padding: 120px 40px 40px;
+        background: black;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #meal h1 {
+        margin: 5px 0 10px;
+        color: #FFE52A;
+    }
+
+    #meal p {
+        max-width: 900px;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body class="fade-in">
+
+<div class="top-bar">BUILT TO CODE, BORN TO DOMINATE</div>
+
+<nav class="navbar">
+   <a href="#home" class="logo">
+       <img src="/Codeb/logo.png.png">
+   </a>
+
+    <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#workout">WORKOUT SPLIT</a></li>
+        <li><a href="#meal">MEAL PLAN</a></li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search...">
+    </div>
+
+    <div class="icons">
+        <a href="https://www.facebook.com/reygel.padios/" target="_blank" class="icon-link">
+          ABOUT US  👤
+        </a>
+        <span>🛒</span>
+    </div>
+</nav>
+
+
+<div class="intro-text">
+    <p><strong class="yellow">WELCOME TO CODEBEAST</strong> — your ultimate fitness information hub built to help you become the strongest version of yourself.</p>
+    <p>We deliver clear, effective guidance on <span class="yellow">workout splits</span>, <span class="yellow">meal plans</span>, and essential fitness knowledge to help you train smarter, eat better, and level up your lifestyle.</p>
+</div>
+
+
+<section id="home" class="hero-video">
+    <video autoplay loop muted playsinline>
+        <source src="Codeb/0525.mp4" type="video/mp4">
+    </video>
+</section>
+
+
+<section id="workout">
+    <h1>WORKOUT SPLIT</h1>
+    <p>
+       Workout split is a training plan that divides your exercises into specific days,  
+       allowing you to focus on certain muscle groups or workout styles each session.  
+       Different workout splits—like Bro Split, Upper-Lower, or Push-Pull-Legs—are  
+       designed to match your fitness goals and schedule.
+    </p>
+
+    <div class="plans">
+        <a href="https://www.youtube.com/watch?v=NN_oc3POnag" target="_blank">
+            <img src="WORKOUT/BROS_SPLIT.jpg" alt="Bros Split">
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=928aRhhPP8I" target="_blank">
+            <img src="WORKOUT/UPPER_LOWER.jpg" alt="Upper Lower Split">
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=eTxO5ZMxcsc" target="_blank">
+            <img src="WORKOUT/FULL_BODY.jpg" alt="Full Body Split">
+        </a>
+    </div>
+</section>
+
+
+<section id="meal">
+    <h1>MEAL PLAN</h1>
+    <p>A meal plan is a structured guide that outlines what and when to eat each day 
+       to support your fitness goals. Different meal plans—like lean bulk, calorie deficit,
+       or maintenance—are designed to help you gain muscle, lose fat, or maintain your current
+       weight while fitting your lifestyle and schedule..</p>
+
+<div class="plans">
+
+   <a href="https://www.youtube.com/watch?v=8BKbu_s8p1Q" target="_blank">   
+   <img src="DIET/LEAN BULK.png" alt="Lean Bulk Meal Plan">
+   </a>
+   
+   <a href="'https://www.youtube.com/watch?v=_nR1juKxIRM " target="_blank">
+   <img src="DIET/CALORIE DEFICIT.png" alt="Calorie Deficit Meal Plan">
+   </a>
+  
+   <a href="https://www.youtube.com/watch?v=VLlX6_2Ris8" target="_blank">
+   <img src="DIET/MAINTENANCE DIET.png" alt="Maintenance Meal Plan">
+   </a>
+
+</div>
+</section>
+
+<script>
+    document.getElementById("search").addEventListener("keyup", function () {
+        console.log("Searching:", this.value);
+    });
+
+    
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+
+            
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+
+            
+            setTimeout(() => {
+                const section = document.querySelector(target);
+                section.scrollIntoView({ behavior: 'smooth' });
+
+                document.body.classList.remove('fade-out');
+                document.body.classList.add('fade-in');
+            }, 300); 
+        });
+    });
+</script>
+
+</body>
+</html>
